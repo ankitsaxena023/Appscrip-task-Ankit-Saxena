@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./footer.module.css";
 import Image from "next/image";
 import { GrLinkedin } from "react-icons/gr";
 import { SlSocialInstagram } from "react-icons/sl";
-import { withRouter } from "next/router";
+import { AiOutlineDown } from "react-icons/ai"; // Importing the down arrow icon
 
 const Footer = () => {
+  const [isMettaMuseVisible, setIsMettaMuseVisible] = useState(true);
+  const [isQuickLinksVisible, setIsQuickLinksVisible] = useState(true);
+  const [isFollowUsVisible, setIsFollowUsVisible] = useState(true);
+
   return (
     <div className={styles.container}>
       <div className={styles.subContainer}>
@@ -47,60 +51,80 @@ const Footer = () => {
         <div className={styles.footerMiddle}>
           <div className={styles.footerMiddleLeft}>
             <div className={styles.footerMiddleFirst}>
-              <h3>mettā muse</h3>
-              <ul>
-                <li>About Us</li>
-                <li>Stories</li>
-                <li>Artisans</li>
-                <li>Boutiques</li>
-                <li>Contact Us</li>
-                <li>EU Compliances Docs</li>
-              </ul>
+              <h3
+                onClick={() => setIsMettaMuseVisible(!isMettaMuseVisible)}
+                className={styles.mobileOnly}
+              >
+                mettā muse <AiOutlineDown className={styles.hideDownArrow} />
+              </h3>
+              {isMettaMuseVisible && (
+                <ul>
+                  <li>About Us</li>
+                  <li>Stories</li>
+                  <li>Artisans</li>
+                  <li>Boutiques</li>
+                  <li>Contact Us</li>
+                  <li>EU Compliances Docs</li>
+                </ul>
+              )}
             </div>
             <div className={styles.footerMiddleSecond}>
-              <h3>Quick Links</h3>
-              <ul>
-                <li>Orders & Shipping</li>
-                <li>Join/Login as a Seller</li>
-                <li>Payment & Pricing</li>
-                <li>Return & Refunds</li>
-                <li>FAQs</li>
-                <li>Privacy Policy</li>
-                <li>Terms & Conditions</li>
-              </ul>
+              <h3
+                onClick={() => setIsQuickLinksVisible(!isQuickLinksVisible)}
+                className={styles.mobileOnly}
+              >
+                Quick Links <AiOutlineDown className={styles.hideDownArrow} />
+              </h3>
+              {isQuickLinksVisible && (
+                <ul>
+                  <li>Orders & Shipping</li>
+                  <li>Join/Login as a Seller</li>
+                  <li>Payment & Pricing</li>
+                  <li>Return & Refunds</li>
+                  <li>FAQs</li>
+                  <li>Privacy Policy</li>
+                  <li>Terms & Conditions</li>
+                </ul>
+              )}
             </div>
           </div>
           <div className={styles.footerMiddleRight}>
             <div className={styles.footerMiddleRightTop}>
-              <h3>Follow Us</h3>
-              <div className={styles.social}>
-                <SlSocialInstagram
-                  style={{
-                    width: "25px",
-                    height: "25px",
-                    backgroundColor: "white",
-                    color: "black",
-                    borderRadius: "50px",
-                    border: "1px solid white",
-                  }}
-                />
-                <GrLinkedin
-                  style={{
-                    width: "25px",
-                    height: "25px",
-                    backgroundColor: "white",
-                    color: "black",
-                    borderRadius: "50px",
-                    border: "1px solid white",
-                  }}
-                />
-              </div>
+              <h3
+                onClick={() => setIsFollowUsVisible(!isFollowUsVisible)}
+                className={styles.mobileOnly}
+              >
+                Follow Us <AiOutlineDown className={styles.hideDownArrow} />
+              </h3>
+              {isFollowUsVisible && (
+                <div className={styles.social}>
+                  <SlSocialInstagram
+                    style={{
+                      width: "25px",
+                      height: "25px",
+                      backgroundColor: "white",
+                      color: "black",
+                      borderRadius: "50px",
+                      border: "1px solid white",
+                    }}
+                  />
+                  <GrLinkedin
+                    style={{
+                      width: "25px",
+                      height: "25px",
+                      backgroundColor: "white",
+                      color: "black",
+                      borderRadius: "50px",
+                      border: "1px solid white",
+                    }}
+                  />
+                </div>
+              )}
             </div>
             <div className={styles.footerMiddleRightBottom}>
               <h3>
                 <span className={styles.modifiedTitle}>mettā muse</span> Accepts
               </h3>
-              {/* Icons go here */}
               <div className={styles.payImageContainer}>
                 <Image
                   src="/gpay.png"

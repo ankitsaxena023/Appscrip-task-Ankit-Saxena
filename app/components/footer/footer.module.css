@@ -256,6 +256,10 @@
   gap: 20px;
 }
 
+.hideDownArrow {
+  display: none;
+}
+
 .footerMiddleThird .iconContainer {
   display: flex;
   align-items: center;
@@ -321,5 +325,8 @@
   .subContainer {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .hideDownArrow {
+    display: block;
   }
 }

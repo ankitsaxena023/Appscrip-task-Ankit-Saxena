@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Items from "./components/Items/Items";
+import Items from "./components/items/Items";
 import Featured from "./components/featured/Featured";
 import Filter from "./components/filter/Filter";
 import Footer from "./components/footer/Footer";
@@ -31,7 +31,7 @@ export default function Home() {
           style={{ flex: isMenuVisible ? 3 : 1 }}
           className={styles.cartItem}
         >
-          <Items />
+          <Items onToggleMenuVisibility={handleToggleMenuVisibility} />
         </div>
       </div>
       <Footer />
