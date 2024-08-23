@@ -12,6 +12,8 @@
 
 .hide_show_filter {
   display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .right_filter {

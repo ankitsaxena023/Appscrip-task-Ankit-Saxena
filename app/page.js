@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Items from "./components/items/Items";
 import Featured from "./components/featured/Featured";
 import Filter from "./components/filter/Filter";
@@ -12,8 +12,24 @@ import styles from "./globals.css";
 export default function Home() {
   const [isMenuVisible, setMenuVisibility] = useState(true);
 
-  const handleToggleMenuVisibility = (isFilterVisible) => {
-    setMenuVisibility(isFilterVisible);
+  // Handle screen resize for menu visibility
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 640) {
+        setMenuVisibility(false);
+      } else {
+        setMenuVisibility(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleToggleMenuVisibility = (shouldShow) => {
+    setMenuVisibility(shouldShow);
   };
 
   return (
@@ -31,7 +47,7 @@ export default function Home() {
           style={{ flex: isMenuVisible ? 3 : 1 }}
           className={styles.cartItem}
         >
-          <Items onToggleMenuVisibility={handleToggleMenuVisibility} />
+          <Items />
         </div>
       </div>
       <Footer />

@@ -6,11 +6,14 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 
 const Filter = ({ onToggleMenuVisibility }) => {
-  const [showFilter, setShowFilter] = useState(false);
+  const [showFilter, setShowFilter] = useState(true);
 
   const handleToggle = () => {
-    setShowFilter((prev) => !prev);
-    onToggleMenuVisibility(() => showFilter);
+    setShowFilter((prev) => {
+      const newShowFilter = !prev;
+      onToggleMenuVisibility(newShowFilter);
+      return newShowFilter;
+    });
   };
 
   return (
@@ -28,7 +31,7 @@ const Filter = ({ onToggleMenuVisibility }) => {
               }}
             />
             <h4 style={{ cursor: "pointer" }}>
-              {showFilter ? "Show Filter" : "Hide Filter"}
+              {showFilter ? "Hide Filter" : "Show Filter"}
             </h4>
           </div>
         </div>

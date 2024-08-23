@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { IoHeartOutline } from "react-icons/io5";
 import styles from "./items.module.css";
 
-const Items = ({ onToggleMenuVisibility }) => {
+const Items = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -24,22 +24,6 @@ const Items = ({ onToggleMenuVisibility }) => {
 
     fetchProducts();
   }, []);
-
-  // Handle screen resize for menu visibility
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 640) {
-        onToggleMenuVisibility(false);
-      } else {
-        onToggleMenuVisibility(true);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, [onToggleMenuVisibility]);
 
   return (
     <div className={styles.itemsContainer}>
