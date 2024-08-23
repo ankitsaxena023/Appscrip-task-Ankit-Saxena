@@ -1,0 +1,73 @@
+.itemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 20px;
+  position: relative;
+  justify-content: flex-start;
+}
+
+.item {
+  overflow: hidden;
+  width: 17rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.price {
+  font-size: 18px;
+  color: #202020;
+}
+
+.heartIcon {
+  width: 24px;
+  height: 24px;
+  color: #202020;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: #202020;
+} 
+/* Media Query for responsiveness */
+ @media (max-width: 1024px) {
+  .itemsContainer {
+    gap: 10px;
+    padding-left: 10px;
+  }
+
+  .item {
+    width: 14rem;
+  }
+}

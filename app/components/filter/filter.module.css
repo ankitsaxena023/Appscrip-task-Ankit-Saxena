@@ -1,0 +1,28 @@
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left_filter {
+  display: flex;
+  gap: 10px;
+}
+
+.hide_show_filter {
+  display: flex;
+}
+
+.right_filter {
+  display: flex;
+}
+
+.recommended_section {
+  display: flex;
+}
+
+.line {
+  margin-bottom: 20px;
+  border: 1px solid #ededed;
+}

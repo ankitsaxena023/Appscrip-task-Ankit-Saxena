@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.left h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.left span {
+  font-size: 14px;
+  color: #666;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.line {
+  height: 1px;
+  background-color: #ddd;
+  margin: 10px 0;
+}
+
+.expandableSection {
+  padding-top: 10px;
+}
+
+.expandableSection p {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.expandableSection label {
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.expandableSection input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Media Query for hiding menu component */
+@media (max-width: 640px) {
+  .menuContainer {
+    display: none;
+  }
+}

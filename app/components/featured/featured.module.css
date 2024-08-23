@@ -1,0 +1,80 @@
+.title {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #252525;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.desc {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #252525;
+  text-align: center;
+}
+
+.line {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  border: 1px solid #ededed;
+}
+
+/* Desktop (1366px and above) */
+@media screen and (min-width: 1367px) {
+  .desc {
+    margin-bottom: 40px;
+  }
+}
+
+/* Tablet (between 768px and 1366px) */
+@media screen and (max-width: 1366px) {
+  .desc {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .desc {
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .desc {
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile (below 768px) */
+@media screen and (max-width: 768px) {
+  .desc {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .desc {
+    display: inline;
+  }
+}
+
+/* Media query for smooth responsiveness of h1 */
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .desc {
+    margin-bottom: 0;
+    display: inline;
+    font-size: 1rem;
+  }
+}

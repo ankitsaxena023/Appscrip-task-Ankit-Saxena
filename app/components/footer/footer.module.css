@@ -1,0 +1,325 @@
+.container {
+  background-color: black;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-top: 50px;
+}
+
+.subContainer {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerTop {
+  display: flex;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.leftTop {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.leftTop h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.leftTop p {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.leftBottom {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.rightTop {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rightTop h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.rightTop p {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.emailInput {
+  outline: none;
+  width: 60%;
+  padding: 15px;
+  border: none;
+  font-size: medium;
+  color: #5b5b5b;
+}
+
+.leftBottom button {
+  width: 25%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  color: #2f2f2f;
+  background-color: black;
+  border: 1px solid #2f2f2f;
+  border-radius: 3px;
+  box-shadow: 1px 1px #2f2f2f;
+  cursor: pointer;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 100px;
+}
+
+.rightBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rightBottom h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.rightBottom p {
+  font-size: 11px;
+  font-weight: 300;
+}
+
+.flagContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footerMiddle {
+  display: flex;
+}
+
+.footerMiddleFirst,
+.footerMiddleSecond,
+.footerMiddleThird {
+  flex: 1;
+  color: white;
+}
+
+/* Middle section of the footer */
+.footerMiddle {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.footerMiddleLeft {
+  flex: 1;
+  display: flex;
+  gap: 75px;
+}
+
+.footerMiddleRight {
+  flex: 1;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.footerMiddleRight h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.footerMiddleRightTop {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footerMiddleRightBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social {
+  display: flex;
+  gap: 5px;
+}
+
+.modifiedTitle {
+  text-transform: lowercase;
+}
+
+.footerMiddleFirst h3,
+.footerMiddleSecond h3 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.footerMiddleThird h3 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* First part: "mettā muse" */
+.footerMiddleFirst {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footerMiddleFirst h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.footerMiddleFirst ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footerMiddleFirst li {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Second part: "Quick Links" */
+.footerMiddleSecond {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footerMiddleSecond h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.footerMiddleSecond ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footerMiddleSecond li {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Third part: two divs for icons */
+.footerMiddleThird {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footerMiddleThird .iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footerMiddleThird h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.payImageContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.paymentMethodItem {
+  object-fit: contain;
+  width: 55px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.footerCopyright {
+  text-align: center;
+  font-weight: 300;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.line {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 1280px) {
+  .subContainer {
+    max-width: 1024px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .subContainer {
+    max-width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .subContainer {
+    max-width: 640px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .subContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
